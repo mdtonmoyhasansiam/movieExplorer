@@ -1,12 +1,15 @@
-import Navbar from "./components/Navbar";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Movies from "./pages/Movies";
 
 function App() {
   return (
-    <div>
-      <Navbar />
-
-      <h1>Movie Explorer</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/movies" element={<Movies />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

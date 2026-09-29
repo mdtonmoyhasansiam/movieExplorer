@@ -1,13 +1,23 @@
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {
   return (
-    <nav>
-      <h2>🎬 Movie Explorer</h2>
+    <nav className="navbar">
+      <div className="navbar-container">
+        <Link to="/" className="navbar-logo">
+          🎬 <span>Movie Explorer</span>
+        </Link>
 
-      <div>
-        <a href="/">Home</a>
-        <a href="/movies">Movies</a>
+        <div className="navbar-links">
+          <Link to="/" className="nav-link">
+            Home
+          </Link>
+
+          <Link to="/movies" className="movies-button">
+            Explore Movies
+          </Link>
+        </div>
       </div>
     </nav>
   );
